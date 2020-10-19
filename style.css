@@ -16,9 +16,70 @@ body{
     to { background-position: -400px 0; }
 }
 
+.button {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: SuperMario256;
+  }
+
+  .btnDiscord {
+    font-family: SuperMario256;
+    background-color: white;
+    color: blueviolet;
+    text-decoration: none;
+    display: inline-block;
+    padding: 24px 40px;
+    margin-top: 700px;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 15px;
+    border-color: blueviolet;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  
+  .btnDiscord:hover {
+    background-color: blueviolet;
+    color: white;
+  }
+
+  .divider {
+    width:100px;
+    height:auto;
+    display:inline-block;
+    }   
+
+.play {
+    margin-top: 700px;
+    border-radius: 15px;
+    font-size: 32px;    
+    padding: 30px 60px;
+    border-color: #4CAF50;
+    color: green;
+  }
+  
+  .play:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
 .section {
     position: relative;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,6 +108,39 @@ body{
     font-family: SuperMario256;
 }
 
+p {
+    margin-right: 200px;
+    text-align: center;
+    padding-bottom: 200px;
+    font-size: 35px;
+    color:blueviolet
+}
+
+.about h1 {
+    position: relative;
+    align-items: center;
+    left: 700px;
+    bottom: 250px;
+    font-size: 400%;
+  }
+
+.credits {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 29, 29);
+    color:white;
+    font-family: SuperMario256;
+}
+
+.credits h2 {
+    margin-bottom: 550px;
+    font-size: 400%;
+}
+
+
 .parallax::after {
     content: " ";
     position: absolute;
@@ -60,10 +154,13 @@ body{
 }
 
 .bg1::after {
-    background-image: url('./assets/bg.png');
+    background-image:   
+    url('./assets/bg.png'),
+    url("./assets/bgicon.png");
     background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: contain;
+    background-position: 50%, -1px -1px; /*     TODO: normal position for icon is 63.5% 63%. removed icon because of scaling / anim problem cause I suck apparently */
+    background-size: contain, 240px 240px;
+    max-width: 100%, 240px 240px;
 }
 
 @font-face {
