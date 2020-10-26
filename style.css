@@ -116,6 +116,19 @@ p {
     color:blueviolet
 }
 
+.creditpeople {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.credittext2 {
+  width: 33vw;
+  max-width: 33%;
+}
+
 .about h1 {
     position: relative;
     align-items: center;
@@ -123,21 +136,20 @@ p {
   }
 
 .credits {
+    flex-direction: column;
     position: relative;
     height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: rgb(31, 29, 29);
     color:white;
     font-family: SuperMario256;
 }
 
-.credits h2 {
-    margin-bottom: 550px;
-    font-size: 400%;
+.credittitle {
+  margin-bottom: 2em;
+  font-size: 60px;
 }
-
 
 .bg1 {
     background-image:   
