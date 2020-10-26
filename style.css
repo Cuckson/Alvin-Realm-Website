@@ -78,40 +78,40 @@ body{
   }
 
 .section {
-    position: relative;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-shadow: 0 0 5px #000;
+    max-height: fit-content;
 }
 
 .footer {
     position: relative;
-    height: 30vh;
+    min-height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: black;
     color:white;
     font-family: Arial, Helvetica, sans-serif;
+    max-height: fit-content;
 }
 
 .about {
-    position: relative;
-    height: 70vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     background-color: rgb(53, 53, 53);
     font-family: SuperMario256;
+    max-height: fit-content;
 }
 
 p {
-    margin-right: 200px;
     text-align: center;
-    padding-bottom: 200px;
     font-size: 35px;
     color:blueviolet
 }
@@ -119,8 +119,6 @@ p {
 .about h1 {
     position: relative;
     align-items: center;
-    left: 700px;
-    bottom: 250px;
     font-size: 400%;
   }
 
@@ -141,22 +139,10 @@ p {
 }
 
 
-.parallax::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translateZ(-1px) scale(1.5);
-    background-size: 100%;
-    z-index: -1;
-}
-
-.bg1::after {
+.bg1 {
     background-image:   
-    url('./assets/bg.png'),
-    url("./assets/bgicon.png");
+    url('./assets/bg.png');
+    /*url("./assets/bgicon.png");*/
     background-repeat: no-repeat;
     background-position: 50%, -1px -1px; /*     TODO: normal position for icon is 63.5% 63%. removed icon because of scaling / anim problem cause I suck apparently */
     background-size: contain, 240px 240px;
