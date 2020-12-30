@@ -25,16 +25,19 @@ body{
     font-size: 16px;
     cursor: pointer;
     font-family: SuperMario256;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    transition-property: font-size;
   }
 
-  .btnDiscord {
+  .Discord {
     font-family: SuperMario256;
     background-color: white;
     color: blueviolet;
     text-decoration: none;
     display: inline-block;
     padding: 24px 40px;
-    margin-top: 700px;
+    margin-top: 670px;
     font-size: 32px;
     font-weight: normal;
     line-height: 1.428571429;
@@ -52,7 +55,8 @@ body{
     user-select: none;
   }
   
-  .btnDiscord:hover {
+  .Discord:hover {
+    font-size: 40px; 
     background-color: blueviolet;
     color: white;
   }
@@ -64,7 +68,7 @@ body{
     }   
 
 .play {
-    margin-top: 700px;
+    margin-top: 670px;
     border-radius: 15px;
     font-size: 32px;    
     padding: 30px 60px;
@@ -73,9 +77,59 @@ body{
   }
   
   .play:hover {
+    font-size: 40px; 
     background-color: #4CAF50;
     color: white;
   }
+
+  .info {
+    margin-top: 670px;
+    border-radius: 15px;
+    font-size: 32px; 
+    padding: 30px 30px;
+    border-color: brown;
+    color: brown;
+    max-height: fit-content;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    transition-property: font-size;
+  }
+  
+  .info:hover {
+    font-size: 40px; 
+    background-color: brown;
+    color: white;
+  }
+
+  .snake {
+    border-radius: 8px;
+    border: 5px solid #555;
+    width: 53vw;
+    max-width: fit-content;
+    margin-right: auto;
+    max-width: 33%;
+    margin-bottom: 700px;
+  }
+
+  .mario {
+    border-radius: 8px;
+    border: 5px solid #555;
+    width: 33vw;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-bottom: 700px;
+  }
+
+  .aboutgif {
+    position: relative;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    color:white;
+    font-family: SuperMario256;
+
+  }
+
 
 .section {
     min-height: 90vh;
@@ -100,7 +154,7 @@ body{
 }
 
 .about {
-    min-height: 70vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -111,6 +165,7 @@ body{
 }
 
 p {
+    margin-top: -200px;
     text-align: center;
     font-size: 35px;
     color:blueviolet
@@ -130,6 +185,7 @@ p {
 }
 
 .about h1 {
+    margin-bottom: 8em;
     position: relative;
     align-items: center;
     font-size: 400%;
@@ -154,7 +210,6 @@ p {
 .bg1 {
     background-image:   
     url('./assets/bg.png');
-    /*url("./assets/bgicon.png");*/
     background-repeat: no-repeat;
     background-position: 50%, -1px -1px; /*     TODO: normal position for icon is 63.5% 63%. removed icon because of scaling / anim problem cause I suck apparently */
     background-size: contain, 240px 240px;
