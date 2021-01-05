@@ -1,14 +1,21 @@
 body,html{margin:0;padding:0;}
 body{
-    background: black url(./assets/bg2.png) repeat 0 0;
+    background: gray url(../assets/bg2.png) repeat 0 0;
     width: 100%;
     margin: 0;
     text-align: center;
-    height: 300px;
+    height: 1000px;
     padding-top: 120px;
     box-sizing: border-box;
-    -webkit-animation: slide 20s linear infinite;
+    -webkit-animation: slide 60s linear infinite;
     background-size: cover;
+}
+
+@font-face {
+    font-family: SuperMario256;
+    src: local("SuperMario256"),
+         local("SuperMario256"),
+         url(../font/SuperMario256.ttf);
 }
 
 @-webkit-keyframes slide {
@@ -21,41 +28,18 @@ body{
     border-radius: 5px;
     background-color: white;
     color: black;
-    padding: 14px 28px;
+    padding: 10px 28px;
     font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     cursor: pointer;
     font-family: SuperMario256;
+    transition-duration: 50ms;
+    transition-timing-function: ease-in-out;
+    transition-property: font-size;
   }
 
-  .btnDiscord {
-    font-family: SuperMario256;
-    background-color: white;
-    color: blueviolet;
-    text-decoration: none;
-    display: inline-block;
-    padding: 24px 40px;
-    margin-top: 700px;
-    font-size: 32px;
-    font-weight: normal;
-    line-height: 1.428571429;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    border: 2px solid black;
-    border-radius: 15px;
-    border-color: blueviolet;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-  }
-  
-  .btnDiscord:hover {
-    background-color: blueviolet;
-    color: white;
-  }
 
   .divider {
     width:100px;
@@ -63,107 +47,33 @@ body{
     display:inline-block;
     }   
 
-.play {
-    margin-top: 700px;
-    border-radius: 15px;
-    font-size: 32px;    
-    padding: 30px 60px;
-    border-color: #4CAF50;
-    color: green;
-  }
-  
-  .play:hover {
+    .section {
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-family: SuperMario256;
+        max-height: fit-content;
+    }
+    
+    .error {
+        visibility: hidden;
+        color: rgb(255, 0, 0);
+    }
+
+  .button:hover {
+    font-size: 20px; 
     background-color: #4CAF50;
     color: white;
   }
 
-.section {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 0 0 5px #000;
-    max-height: fit-content;
-}
-
-.footer {
-    position: relative;
-    min-height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
-    max-height: fit-content;
-}
-
-.about {
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(53, 53, 53);
+  input[type=text], select {
+    border: 5px solid black;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 20px;
     font-family: SuperMario256;
-    max-height: fit-content;
-}
-
-p {
-    text-align: center;
-    font-size: 35px;
-    color:blueviolet
-}
-
-.creditpeople {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-
-}
-
-.credittext2 {
-  width: 33vw;
-  max-width: 33%;
-}
-
-.about h1 {
-    position: relative;
-    align-items: center;
-    font-size: 400%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
-
-.credits {
-    flex-direction: column;
-    position: relative;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    background-color: rgb(31, 29, 29);
-    color:white;
-    font-family: SuperMario256;
-}
-
-.credittitle {
-  margin-bottom: 2em;
-  font-size: 60px;
-}
-
-.bg1 {
-    background-image:   
-    url('./assets/bg.png');
-    /*url("./assets/bgicon.png");*/
-    background-repeat: no-repeat;
-    background-position: 50%, -1px -1px; /*     TODO: normal position for icon is 63.5% 63%. removed icon because of scaling / anim problem cause I suck apparently */
-    background-size: contain, 240px 240px;
-    max-width: 100%, 240px 240px;
-}
-
-@font-face {
-    font-family: SuperMario256;
-    src: local("SuperMario256"),
-         local("SuperMario256"),
-         url(./font/SuperMario256.ttf);
-}
